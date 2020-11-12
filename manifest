@@ -7,7 +7,7 @@ description-file: ./upstream/README.md
 url: https://github.com/hjiang/jsonxx
 package-url: https://github.com/build2-packaging/jsonxx
 email: hong@hjiang.net
-packaging-email: mjklaim@gmail.com
+package-email: mjklaim@gmail.com
 
 depends: * build2 >= 0.13.0
 depends: * bpkg >= 0.13.0
