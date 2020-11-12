@@ -18,9 +18,6 @@ hxx{version}: in{version} $src_root/manifest
 #
 cxx.poptions =+ "-I$out_root" "-I$src_root" "-I$src_base"
 
-obja{*}: cxx.poptions += -DJSONXX_STATIC_BUILD
-objs{*}: cxx.poptions += -DJSONXX_SHARED_BUILD
-
 # Export options.
 #
 lib{jsonxx}:
@@ -28,9 +25,6 @@ lib{jsonxx}:
   cxx.export.poptions = "-I$out_root" "-I$src_root" "-I$src_base"
   cxx.export.libs = $intf_libs
 }
-
-liba{jsonxx}: cxx.export.poptions += -DJSONXX_STATIC
-libs{jsonxx}: cxx.export.poptions += -DJSONXX_SHARED
 
 # For pre-releases use the complete version to make sure they cannot be used
 # in place of another pre-release or the final version. See the version module

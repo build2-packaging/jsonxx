@@ -8,3 +8,10 @@ cxx{*}: extension = cc
 # The test target for cross-testing (running tests under Wine, etc).
 #
 test.target = $cxx.target
+
+# This library officially only support static builds,
+# but we will prevent them only on Windows.
+if($cxx.target.class == 'windows')
+{
+    bin.lib = static
+}
