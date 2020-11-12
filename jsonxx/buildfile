@@ -16,7 +16,7 @@ hxx{version}: in{version} $src_root/manifest
 
 # Build options.
 #
-cxx.poptions =+ "-I$out_root" "-I$src_root"
+cxx.poptions =+ "-I$out_root" "-I$src_root" "-I$src_base"
 
 obja{*}: cxx.poptions += -DJSONXX_STATIC_BUILD
 objs{*}: cxx.poptions += -DJSONXX_SHARED_BUILD
@@ -25,7 +25,7 @@ objs{*}: cxx.poptions += -DJSONXX_SHARED_BUILD
 #
 lib{jsonxx}:
 {
-  cxx.export.poptions = "-I$out_root" "-I$src_root"
+  cxx.export.poptions = "-I$out_root" "-I$src_root" "-I$src_base"
   cxx.export.libs = $intf_libs
 }
 
@@ -46,6 +46,6 @@ else
 #
 {hxx ixx txx}{*}:
 {
-  install         = include/jsonxx/
+  install         = include/
   install.subdirs = true
 }
