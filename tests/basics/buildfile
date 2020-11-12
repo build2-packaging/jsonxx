@@ -1,0 +1,3 @@
+import libs = jsonxx%lib{jsonxx}
+
+exe{driver}: {hxx ixx txx cxx}{**} $libs testscript{**}
