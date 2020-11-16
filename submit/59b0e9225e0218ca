@@ -1,0 +1,5 @@
+: 1
+name: jsonxx
+version: 0.22.0-a.1
+summary: A JSON parser in C++
+license: MIT
