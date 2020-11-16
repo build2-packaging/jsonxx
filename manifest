@@ -3,7 +3,7 @@ name: jsonxx
 version: 0.22.0-a.1
 summary: A JSON parser in C++
 license: MIT
-description-file: ./upstream/README.md
+description-file: upstream/README.md
 url: https://github.com/hjiang/jsonxx
 package-url: https://github.com/build2-packaging/jsonxx
 email: hong@hjiang.net
