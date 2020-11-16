@@ -1,3 +1,0 @@
-# jsonxx
-
-C++ library
