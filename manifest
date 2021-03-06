@@ -1,6 +1,6 @@
 : 1
 name: jsonxx
-version: 0.22.0-a.1
+version: 1.0.1
 summary: A JSON parser in C++
 license: MIT
 description-file: README.md
