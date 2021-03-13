@@ -2,17 +2,8 @@ intf_libs = # Interface dependencies.
 impl_libs = # Implementation dependencies.
 #import impl_libs += libhello%lib{hello}
 
-lib{jsonxx}: {hxx ixx txx cxx}{** -version} hxx{version} $impl_libs $intf_libs
+lib{jsonxx}: {hxx ixx txx cxx}{**} $impl_libs $intf_libs
 
-# Include the generated version header into the distribution (so that we don't
-# pick up an installed one) and don't remove it when cleaning in src (so that
-# clean results in a state identical to distributed).
-#
-hxx{version}: in{version} $src_root/manifest
-{
-  dist  = true
-  clean = ($src_root != $out_root)
-}
 
 # Build options.
 #
